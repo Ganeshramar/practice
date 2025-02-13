@@ -4,11 +4,16 @@
     <p>Double Count: {{ doubleCount()}}</p>
     <button (click)="increment()">Increment</button>
 </div>
-<button [routerLink]="'/signalform'">Signal Form </button><br>
-<button [routerLink]="'/react'">Reactive Form </button><br>
-<button [routerLink]="'/visible'">Visible </button><br>
+<app-router-button label="Signal Form" link="/signalform"></app-router-button>
+<app-router-button label="Reactive Form" link="/react"></app-router-button>
+<app-router-button label="Visible" link="/visible"></app-router-button>
+<app-router-button label="Hide" link="/treasure"></app-router-button>
+<app-router-button label="Count Signal" link="/countSignal"></app-router-button>
+<!-- <button [routerLink]="'/signalform'">Signal Form </button><br> -->
+<!-- <button [routerLink]="'/react'">Reactive Form </button><br> -->
+<!-- <button [routerLink]="'/visible'">Visible </button><br>
 <button [routerLink]="'/treasure'">Hide </button><br>
-<button [routerLink]="'/countSignal'">Count Signal </button><br>
+<button [routerLink]="'/countSignal'">Count Signal </button><br> -->
 
 <br><br>
 <div>

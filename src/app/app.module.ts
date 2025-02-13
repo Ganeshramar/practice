@@ -19,6 +19,7 @@ import { CountDownSignalComponent } from './components/count-down-signal/count-d
 import { UserListImperativeComponent } from './components/user-list-imperative/user-list-imperative.component';
 import { UserListDeclarativeComponent } from './components/user-list-declarative/user-list-declarative.component';
 import { UserListSignalsComponent } from './components/user-list-signals/user-list-signals.component';
+import { RouterButtonComponent } from './components/router-button/router-button.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { UserListSignalsComponent } from './components/user-list-signals/user-li
     CountDownSignalComponent,
     UserListImperativeComponent,
     UserListDeclarativeComponent,
-    UserListSignalsComponent
+    UserListSignalsComponent,
+    RouterButtonComponent
   ],
   imports: [
     BrowserModule,
