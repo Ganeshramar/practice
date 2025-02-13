@@ -1,0 +1,25 @@
+<p>signals works!</p>
+<div>
+    <p>Count: {{ count()}}</p>
+    <p>Double Count: {{ doubleCount()}}</p>
+    <button (click)="increment()">Increment</button>
+</div>
+<button [routerLink]="'/signalform'">Signal Form </button><br>
+<button [routerLink]="'/react'">Reactive Form </button><br>
+<button [routerLink]="'/visible'">Visible </button><br>
+<button [routerLink]="'/treasure'">Hide </button><br>
+<button [routerLink]="'/countSignal'">Count Signal </button><br>
+
+<br><br>
+<div>
+    <h2>Second Component - Signal Sharing</h2>
+    <p>Received Value from Signal : {{sharedService.sharedSignal()}}</p>
+</div>
+<br><br><br>
+<app-signal-form></app-signal-form>
+<br><br><br>
+<h1>Angular URL Subscribtion Sample</h1>
+<nav>
+    <a routerLink="/home">Home</a><br>
+    <a routerLink="/about">About</a>
+</nav>

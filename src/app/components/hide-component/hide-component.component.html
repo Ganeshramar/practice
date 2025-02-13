@@ -1,0 +1,6 @@
+<p>Query Parameter works!</p>
+<h1>Search Query: {{ query }}</h1>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <app-resuable-form label="Name of Mother" controlKey="nameOfFather"></app-resuable-form>
+    <button>Submit</button>
+  </form>

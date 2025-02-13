@@ -1,0 +1,45 @@
+<div *ngIf="!timeLeft().isOver">
+    Your reservation ends in {{ timeLeft().days }} days,
+    {{ timeLeft().hours }} hours, {{ timeLeft().minutes }} min and
+    {{ timeLeft().seconds }} s
+</div>
+
+<div *ngIf="timeLeft().isOver">
+    ⏳ Your reservation time is over!
+</div>
+  
+<div>
+    <!-- Using ngModel (Preferred and recommended approach) -->
+    <input [(ngModel)]="user.name">
+    <p>{{ user?.name }}</p>
+</div>
+
+<div>
+    <input [value]="user.name" (input)="updateName($event)">
+    <p>{{ user?.name }}</p>
+</div>
+
+<button (click)="isVisible = !isVisible">Toggle Content</button>
+
+@if (isVisible) {
+  <p>The content is now visible! 🎉</p>
+} @else {
+  <p>Content is hidden. 🔒</p>
+}
+
+<button (click)="loadContent = !loadContent">Load Heavy Content</button>
+
+@defer (when loadContent) {
+  <p>Loading completed! 🚀</p>
+} @loading {
+  <p>Loading... ⏳</p>
+} @error {
+  <p>Error loading content! ❌</p>
+}
+
+//It’s clear, predictable, and much easier to maintain.
+<button [routerLink]="'/userDeclar'">User List Declarative </button><br>
+//write out all the steps to update your data manually.
+<button [routerLink]="'/userImper'">User List Imperative </button><br>
+//Using signals
+<button [routerLink]="'/userSignalDeclar'">User List Signal with Declarative </button><br>
