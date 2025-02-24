@@ -52,4 +52,5 @@ export class CountDownSignalComponent {
       this.user.name = inputElement.value;
     }
   }
+  
 }

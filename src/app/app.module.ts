@@ -20,6 +20,9 @@ import { UserListImperativeComponent } from './components/user-list-imperative/u
 import { UserListDeclarativeComponent } from './components/user-list-declarative/user-list-declarative.component';
 import { UserListSignalsComponent } from './components/user-list-signals/user-list-signals.component';
 import { RouterButtonComponent } from './components/router-button/router-button.component';
+import { ProductComponent } from './components/product/product.component';
+import { CartComponent } from './components/cart/cart.component';
+import { CartSampleComponent } from './components/cart-sample/cart-sample.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { RouterButtonComponent } from './components/router-button/router-button.
     UserListImperativeComponent,
     UserListDeclarativeComponent,
     UserListSignalsComponent,
-    RouterButtonComponent
+    RouterButtonComponent,
+    ProductComponent,
+    CartComponent,
+    CartSampleComponent
   ],
   imports: [
     BrowserModule,

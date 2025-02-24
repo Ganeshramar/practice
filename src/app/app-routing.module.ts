@@ -13,6 +13,7 @@ import { CountDownSignalComponent } from './components/count-down-signal/count-d
 import { UserListDeclarativeComponent } from './components/user-list-declarative/user-list-declarative.component';
 import { UserListImperativeComponent } from './components/user-list-imperative/user-list-imperative.component';
 import { UserListSignalsComponent } from './components/user-list-signals/user-list-signals.component';
+import { CartSampleComponent } from './components/cart-sample/cart-sample.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'signals', pathMatch: 'full' },
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'userDeclar', component: UserListDeclarativeComponent },//subject,rxjs
   { path: 'userImper', component: UserListImperativeComponent },//manual,rxjs
   { path: 'userSignalDeclar', component: UserListSignalsComponent },//signals
+  { path: 'cartPage', component:CartSampleComponent },//signals
 ];
 
 @NgModule({
