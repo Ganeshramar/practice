@@ -23,6 +23,8 @@ import { RouterButtonComponent } from './components/router-button/router-button.
 import { ProductComponent } from './components/product/product.component';
 import { CartComponent } from './components/cart/cart.component';
 import { CartSampleComponent } from './components/cart-sample/cart-sample.component';
+import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { CartSampleComponent } from './components/cart-sample/cart-sample.compon
     RouterButtonComponent,
     ProductComponent,
     CartComponent,
-    CartSampleComponent
+    CartSampleComponent,
+    ThemeToggleComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

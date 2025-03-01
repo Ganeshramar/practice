@@ -14,6 +14,7 @@ import { UserListDeclarativeComponent } from './components/user-list-declarative
 import { UserListImperativeComponent } from './components/user-list-imperative/user-list-imperative.component';
 import { UserListSignalsComponent } from './components/user-list-signals/user-list-signals.component';
 import { CartSampleComponent } from './components/cart-sample/cart-sample.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'signals', pathMatch: 'full' },
@@ -31,6 +32,7 @@ const routes: Routes = [
   { path: 'userImper', component: UserListImperativeComponent },//manual,rxjs
   { path: 'userSignalDeclar', component: UserListSignalsComponent },//signals
   { path: 'cartPage', component:CartSampleComponent },//signals
+  { path: 'theme', component:NavBarComponent },//dark-rtheme
 ];
 
 @NgModule({

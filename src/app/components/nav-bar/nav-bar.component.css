@@ -1,0 +1,35 @@
+
+:root {
+    --primary-color: #007bff;
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --navbar-color: #e7e7e7;
+  }
+  
+  .dark-theme {
+    --primary-color: #007bff;
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --navbar-color: #2e2e2e;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 200ms, color 200ms;
+  }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--navbar-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+}
+
+.navbar a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-right: 15px;
+}
