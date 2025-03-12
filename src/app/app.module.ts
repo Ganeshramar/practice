@@ -12,7 +12,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 import { SignalFormComponent } from './components/signal-form/signal-form.component';
 import { AbstractComponent } from './components/abstract/abstract.component';
-import { AbstractManageComponent } from './components/abstract-manage/abstract-manage.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { CountDownSignalComponent } from './components/count-down-signal/count-down-signal.component';

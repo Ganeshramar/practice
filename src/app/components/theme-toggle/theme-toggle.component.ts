@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ThemeService } from '../../service/theme.service';
+import { ThemeService } from '../service/theme.service';
 import { Observable } from 'rxjs';
 
 @Component({

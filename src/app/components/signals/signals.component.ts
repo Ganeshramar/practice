@@ -1,6 +1,6 @@
 import { Component, computed, signal, effect } from '@angular/core';
-import { SharedService } from '../../service/shared.service';
-import { UrlService } from '../../service/url.service';
+import { SharedService } from '../service/shared.service';
+import { UrlService } from '../service/url.service';
 
 @Component({
   selector: 'app-signals',

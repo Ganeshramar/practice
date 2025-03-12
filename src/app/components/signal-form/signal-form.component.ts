@@ -1,7 +1,7 @@
 import { Component, computed, signal } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { futureDate, maxlength, minLength, required, startBeforeEndDate,emailValid } from '../../shared/validators';
-import { SharedService } from '../../service/shared.service';
+import { SharedService } from '../service/shared.service';
 
 @Component({
   selector: 'app-signal-form',
