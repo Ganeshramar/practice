@@ -1,54 +1,52 @@
 <div>
-    <input 
-        [value]="email()" 
-        (input)="updateEmail($event)" 
-        placeholder="Email"
-    />
-    <input 
-        [value]="password()" 
-        (input)="updatePassword($event)" 
-        placeholder="Password"
-        type="password"
-    />
-    <!-- <p *ngIf="!isFormValid()">Invalid Email or Password</p> -->
-    <button (click)="onSubmit()">Submit</button>
-  
-    <div *ngIf="successMessage" class="success-pop">
-      {{ successMessage }}
-    </div>
+  <input [value]="email()" (input)="updateEmail($event)" placeholder="Email" />
+  <input
+    [value]="password()"
+    (input)="updatePassword($event)"
+    placeholder="Password"
+    type="password"
+  />
+  <!-- <p *ngIf="!isFormValid()">Invalid Email or Password</p> -->
+  <button (click)="onSubmit()">Submit</button>
+
+  <div *ngIf="successMessage" class="success-pop">
+    {{ successMessage }}
   </div>
+</div>
 
-  <ng-template #myTemplate let-name let-age="age">
-    <div>
-        name: {{ name }} , Age: {{ age }}ji
-    </div>
-  </ng-template>
+<ng-template #myTemplate let-name let-age="age">
+  <div>name: {{ name }} , Age: {{ age }}ji</div>
+</ng-template>
 
-  <div
-    [ngTemplateOutlet]="myTemplate"
-    [ngTemplateOutletContext]="{ $implicit: 'Jack' , age: 57}"
-  ></div>
+<div
+  [ngTemplateOutlet]="myTemplate"
+  [ngTemplateOutletContext]="{ $implicit: 'Jack', age: 57 }"
+></div>
 
-  <br><br>
-  <p>{{price | currency:'INR': 'symbol-narrow':'1.0-0'}}</p>
-  <p>{{message | uppercase}}</p>
-  <p>{{sampleDate | date:'MMMM d, y, h:mm:ss a'}}</p>
+<br /><br />
+<p>{{ price | currency: "INR" : "symbol-narrow" : "1.0-0" }}</p>
+<p>{{ message | uppercase }}</p>
+<p>{{ sampleDate | date: "MMMM d, y, h:mm:ss a" }}</p>
 
-  <br><br>
-  <form>
-    <label for="email">Another Email Address</label>
-    <input
-        type="email"
-        id="email"
-        [formControl]="emailAddress"
-        placeholder="Another Email Address"
-        required>
-  </form>
-  <br><br>
-  <div>
-    <h2>First Component - Signal Sharing</h2>
-    <p>Current Value: {{signalValue}}</p>
-    <input type="text" [(ngModel)]="newValue" placeholder="Enter the Signal Service Value">
-    <button (click)="updateValue()">Update Value</button>
-  </div>
-  
+<br /><br />
+<form>
+  <label for="email">Another Email Address</label>
+  <input
+    type="email"
+    id="email"
+    [formControl]="emailAddress"
+    placeholder="Another Email Address"
+    required
+  />
+</form>
+<br /><br />
+<div>
+  <h2>First Component - Signal Sharing</h2>
+  <p>Current Value: {{ signalValue }}</p>
+  <input
+    type="text"
+    [(ngModel)]="newValue"
+    placeholder="Enter the Signal Service Value"
+  />
+  <button (click)="updateValue()">Update Value</button>
+</div>

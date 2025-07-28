@@ -18,12 +18,12 @@ export class CartService {
 
   removeFromCart(productId: number) {
     this.cart.update((currentCart) =>
-      currentCart.filter((product) => product.id !== productId)
+      currentCart.filter((product) => product.id !== productId),
     );
   }
 
   totalPrice = computed(() =>
-    this.cart().reduce((acc, curr) => acc + curr.price, 0)
+    this.cart().reduce((acc, curr) => acc + curr.price, 0),
   );
 
   getCart() {

@@ -8,10 +8,9 @@ describe('ResuableFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ResuableFormComponent]
-    })
-    .compileComponents();
-    
+      declarations: [ResuableFormComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(ResuableFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

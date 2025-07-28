@@ -25,12 +25,20 @@
   --navbar-color: #2e2e2e;
 }
 
-body, html, p, h1, h2, h3, h4, h5, span {
+body,
+html,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+span {
   padding: 0;
   margin: 0;
 }
 body {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   background-color: var(--color-background);
 }
 form {
@@ -42,7 +50,10 @@ form {
   width: 100%;
 }
 
-label, input:not([type="checkbox"]), fieldset, button {
+label,
+input:not([type="checkbox"]),
+fieldset,
+button {
   width: 100%;
   box-sizing: border-box;
 }
@@ -81,7 +92,8 @@ legend {
   font-weight: bold;
 }
 
-input, button {
+input,
+button {
   border-radius: 5px;
   font-size: 18px;
   padding: 10px 11px;

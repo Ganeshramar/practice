@@ -8,10 +8,9 @@ describe('AbstractManageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AbstractManageComponent]
-    })
-    .compileComponents();
-    
+      declarations: [AbstractManageComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(AbstractManageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

@@ -8,10 +8,9 @@ describe('RouterButtonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [RouterButtonComponent]
-    })
-    .compileComponents();
-    
+      declarations: [RouterButtonComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(RouterButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

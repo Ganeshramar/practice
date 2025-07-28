@@ -19,24 +19,24 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 const routes: Routes = [
   { path: '', redirectTo: 'signals', pathMatch: 'full' },
   { path: 'signals', component: SignalsComponent },
-  { path: 'treasure/:id', component: TreasureComponent},//Router Parameter
-  { path: 'treasure', component: hideComponent},//Query Parameter
-  { path: 'visible', component: visibleComponent, data: {title: 'Treasure'}},//Route data
-  { path: 'react', component: ReactiveFormComponent },//Reactive Form
-  { path: 'signalform', component: SignalFormComponent },//Reactive Form
-  { path: 'abstract', component: AbstractComponent },//abstract
-  { path: 'home', component: HomeComponent },//home
-  { path: 'about', component: AboutComponent },//about
-  { path: 'countSignal', component: CountDownSignalComponent },//countSignal
-  { path: 'userDeclar', component: UserListDeclarativeComponent },//subject,rxjs
-  { path: 'userImper', component: UserListImperativeComponent },//manual,rxjs
-  { path: 'userSignalDeclar', component: UserListSignalsComponent },//signals
-  { path: 'cartPage', component:CartSampleComponent },//signals
-  { path: 'theme', component:NavBarComponent },//dark-rtheme
+  { path: 'treasure/:id', component: TreasureComponent }, //Router Parameter
+  { path: 'treasure', component: hideComponent }, //Query Parameter
+  { path: 'visible', component: visibleComponent, data: { title: 'Treasure' } }, //Route data
+  { path: 'react', component: ReactiveFormComponent }, //Reactive Form
+  { path: 'signalform', component: SignalFormComponent }, //Reactive Form
+  { path: 'abstract', component: AbstractComponent }, //abstract
+  { path: 'home', component: HomeComponent }, //home
+  { path: 'about', component: AboutComponent }, //about
+  { path: 'countSignal', component: CountDownSignalComponent }, //countSignal
+  { path: 'userDeclar', component: UserListDeclarativeComponent }, //subject,rxjs
+  { path: 'userImper', component: UserListImperativeComponent }, //manual,rxjs
+  { path: 'userSignalDeclar', component: UserListSignalsComponent }, //signals
+  { path: 'cartPage', component: CartSampleComponent }, //signals
+  { path: 'theme', component: NavBarComponent }, //dark-rtheme
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

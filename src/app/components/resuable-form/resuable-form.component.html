@@ -1,12 +1,21 @@
 <fieldset [formGroupName]="controlKey">
-    <legend>{{ label }}</legend>
-    <div class="form-field">
-      <label for="firstName">First Name</label>
-      <input formControlName="firstName" type="text" id="firstName" placeholder="Enter the First Name">
-    </div>
-    <div class="form-field">
-      <label for="lastName">Last Name</label>
-      <input formControlName="lastName" type="text" id="lastName" placeholder="Enter the Last Name">
-    </div>
-  </fieldset>
-  
+  <legend>{{ label }}</legend>
+  <div class="form-field">
+    <label for="firstName">First Name</label>
+    <input
+      formControlName="firstName"
+      type="text"
+      id="firstName"
+      placeholder="Enter the First Name"
+    />
+  </div>
+  <div class="form-field">
+    <label for="lastName">Last Name</label>
+    <input
+      formControlName="lastName"
+      type="text"
+      id="lastName"
+      placeholder="Enter the Last Name"
+    />
+  </div>
+</fieldset>

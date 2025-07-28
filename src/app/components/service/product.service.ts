@@ -27,7 +27,7 @@ export class ProductService {
   filteredProducts = computed(() => {
     const query = this.searchQuery().toLowerCase();
     return this.products().filter((product) =>
-      product.name.toLowerCase().includes(query)
+      product.name.toLowerCase().includes(query),
     );
   });
 

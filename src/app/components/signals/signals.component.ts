@@ -5,25 +5,29 @@ import { UrlService } from '../service/url.service';
 @Component({
   selector: 'app-signals',
   templateUrl: './signals.component.html',
-  styleUrl: './signals.component.css'
+  styleUrl: './signals.component.css',
 })
 export class SignalsComponent {
   count = signal(0);
-  constructor( public sharedService: SharedService, private urlService: UrlService){
+  constructor(
+    public sharedService: SharedService,
+    private urlService: UrlService,
+  ) {
     effect(() => {
       console.log(`This is new count value:  ${this.count()}`);
     });
-    
+
     effect(() => {
       console.log(`This is new count value:  ${this.count()}`);
-      console.log(`This is service value:  ${this.sharedService.sharedSignal()}`);
+      console.log(
+        `This is service value:  ${this.sharedService.sharedSignal()}`,
+      );
     });
   }
 
-  increment(){
+  increment() {
     this.count.set(this.count() + 1);
   }
 
   doubleCount = computed(() => this.count() * 2);
-
 }

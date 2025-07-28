@@ -1,12 +1,18 @@
-import { Injectable, Renderer2, RendererFactory2, Inject, PLATFORM_ID } from '@angular/core';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import {
+  Injectable,
+  Renderer2,
+  RendererFactory2,
+  Inject,
+  PLATFORM_ID,
+} from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ThemeService {
-
   private darkMode = new BehaviorSubject<boolean>(false);
   public isDarkMode$ = this.darkMode.asObservable();
   private renderer: Renderer2;
@@ -14,7 +20,7 @@ export class ThemeService {
 
   constructor(
     rendererFactory: RendererFactory2,
-    @Inject(PLATFORM_ID) private platformId: any // Detect if running in browser
+    @Inject(PLATFORM_ID) private platformId: any, // Detect if running in browser
   ) {
     this.renderer = rendererFactory.createRenderer(null, null);
     this.isBrowser = isPlatformBrowser(platformId);

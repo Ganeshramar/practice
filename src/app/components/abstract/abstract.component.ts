@@ -4,7 +4,7 @@ import { AbstractManageComponent } from '../abstract-manage/abstract-manage.comp
 @Component({
   selector: 'app-abstract',
   templateUrl: './abstract.component.html',
-  styleUrls: ['./abstract.component.css'] // Note: Use `styleUrls` (plural)
+  styleUrls: ['./abstract.component.css'], // Note: Use `styleUrls` (plural)
 })
 export class AbstractComponent extends AbstractManageComponent {
   constructor() {
@@ -12,7 +12,7 @@ export class AbstractComponent extends AbstractManageComponent {
     //this.abstractTitle = 'Change this one';
   }
 
-  getComponentInfo(){
+  getComponentInfo() {
     return 'This is a title for new one';
   }
 }

@@ -1,22 +1,20 @@
 <div *ngIf="!timeLeft().isOver">
-    Your reservation ends in {{ timeLeft().days }} days,
-    {{ timeLeft().hours }} hours, {{ timeLeft().minutes }} min and
-    {{ timeLeft().seconds }} s
+  Your reservation ends in {{ timeLeft().days }} days,
+  {{ timeLeft().hours }} hours, {{ timeLeft().minutes }} min and
+  {{ timeLeft().seconds }} s
 </div>
 
-<div *ngIf="timeLeft().isOver">
-    ⏳ Your reservation time is over!
-</div>
-  
+<div *ngIf="timeLeft().isOver">⏳ Your reservation time is over!</div>
+
 <div>
-    <!-- Using ngModel (Preferred and recommended approach) -->
-    <input [(ngModel)]="user.name">
-    <p>{{ user?.name }}</p>
+  <!-- Using ngModel (Preferred and recommended approach) -->
+  <input [(ngModel)]="user.name" />
+  <p>{{ user?.name }}</p>
 </div>
 
 <div>
-    <input [value]="user.name" (input)="updateName($event)">
-    <p>{{ user?.name }}</p>
+  <input [value]="user.name" (input)="updateName($event)" />
+  <p>{{ user?.name }}</p>
 </div>
 
 <button (click)="isVisible = !isVisible">Toggle Content</button>
@@ -39,13 +37,22 @@
 
 <!-- //It’s clear, predictable, and much easier to maintain.
 <button [routerLink]="'/userDeclar'">User List Declarative </button><br> -->
-<app-router-button label="User List Declarative" link="/userDeclar"></app-router-button>
+<app-router-button
+  label="User List Declarative"
+  link="/userDeclar"
+></app-router-button>
 <!-- //write out all the steps to update your data manually.
 <button [routerLink]="'/userImper'">User List Imperative </button><br> -->
-<app-router-button label="User List Imperative" link="/userImper"></app-router-button>
+<app-router-button
+  label="User List Imperative"
+  link="/userImper"
+></app-router-button>
 <!-- //Using signals
 <button [routerLink]="'/userSignalDeclar'">User List Signal with Declarative </button><br> -->
-<app-router-button label="User List Signal with Declarative" link="/userSignalDeclar"></app-router-button>
+<app-router-button
+  label="User List Signal with Declarative"
+  link="/userSignalDeclar"
+></app-router-button>
 <app-router-button label="Theme Change" link="/theme"></app-router-button>
 
 <hr />

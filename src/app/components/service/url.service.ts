@@ -12,7 +12,11 @@ export class UrlService {
 
   subscribeToUrlChanges() {
     this.router.events
-      .pipe(filter((event): event is NavigationEnd => event instanceof NavigationEnd)) // Explicit type guard
+      .pipe(
+        filter(
+          (event): event is NavigationEnd => event instanceof NavigationEnd,
+        ),
+      ) // Explicit type guard
       .subscribe((event: NavigationEnd) => {
         console.log('Current URL: ', event.url);
       });

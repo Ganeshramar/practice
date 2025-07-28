@@ -8,10 +8,9 @@ describe('CountDownSignalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CountDownSignalComponent]
-    })
-    .compileComponents();
-    
+      declarations: [CountDownSignalComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(CountDownSignalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

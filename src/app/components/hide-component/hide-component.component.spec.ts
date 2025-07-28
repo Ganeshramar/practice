@@ -8,10 +8,9 @@ describe('hideComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [hideComponent]
-    })
-    .compileComponents();
-    
+      declarations: [hideComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(hideComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

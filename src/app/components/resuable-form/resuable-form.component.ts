@@ -29,7 +29,7 @@ export class ResuableFormComponent implements OnInit, OnDestroy {
         new FormGroup({
           firstName: new FormControl(''),
           lastName: new FormControl(''),
-        })
+        }),
       );
     }
   }

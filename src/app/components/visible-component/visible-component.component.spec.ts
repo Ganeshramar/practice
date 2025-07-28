@@ -8,10 +8,9 @@ describe('visibleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [visibleComponent]
-    })
-    .compileComponents();
-    
+      declarations: [visibleComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(visibleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

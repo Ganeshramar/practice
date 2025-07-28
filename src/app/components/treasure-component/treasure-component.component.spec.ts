@@ -8,10 +8,9 @@ describe('TreasureComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TreasureComponent]
-    })
-    .compileComponents();
-    
+      declarations: [TreasureComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(TreasureComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

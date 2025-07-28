@@ -1,17 +1,17 @@
 <div>
-    <h2>Declarative Approach with Form Controls</h2>
-    <input
-      type="text"
-      [formControl]="nameFilterControl"
-      placeholder="Filter users..."
-    />
-    <select [formControl]="sortControl">
-      <option value="name">Name</option>
-      <option value="age">Age</option>
-    </select>
-    <ul>
-      <li *ngFor="let user of filteredUsers$ | async">
-        {{ user.name }} - {{ user.age }}
-      </li>
-    </ul>
+  <h2>Declarative Approach with Form Controls</h2>
+  <input
+    type="text"
+    [formControl]="nameFilterControl"
+    placeholder="Filter users..."
+  />
+  <select [formControl]="sortControl">
+    <option value="name">Name</option>
+    <option value="age">Age</option>
+  </select>
+  <ul>
+    <li *ngFor="let user of filteredUsers$ | async">
+      {{ user.name }} - {{ user.age }}
+    </li>
+  </ul>
 </div>

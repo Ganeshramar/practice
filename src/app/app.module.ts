@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import {
+  BrowserModule,
+  provideClientHydration,
+} from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -47,20 +50,11 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     CartComponent,
     CartSampleComponent,
     ThemeToggleComponent,
-    NavBarComponent
+    NavBarComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    FormsModule
-  ],
-  providers: [
-    provideClientHydration()
-  ],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule],
+  providers: [provideClientHydration()],
   bootstrap: [AppComponent],
-  exports: [
-    ResuableFormComponent
-  ]
+  exports: [ResuableFormComponent],
 })
-export class AppModule { }
+export class AppModule {}

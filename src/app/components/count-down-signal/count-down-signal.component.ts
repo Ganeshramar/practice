@@ -25,7 +25,7 @@ export class CountDownSignalComponent {
     .pipe(
       takeWhile(() => this.timeLeft().timeDifference > 0),
       takeUntilDestroyed(),
-      tap(() => this.currentTime.set(new Date()))
+      tap(() => this.currentTime.set(new Date())),
     )
     .subscribe();
 
@@ -35,16 +35,27 @@ export class CountDownSignalComponent {
     const timeDifference = expiresAt.getTime() - now.getTime();
 
     if (timeDifference <= 0) {
-      return { days: 0, hours: 0, minutes: 0, seconds: 0, isOver: true, timeDifference };
+      return {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+        isOver: true,
+        timeDifference,
+      };
     }
 
     const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+    const hours = Math.floor(
+      (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+    );
+    const minutes = Math.floor(
+      (timeDifference % (1000 * 60 * 60)) / (1000 * 60),
+    );
     const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
     return { days, hours, minutes, seconds, isOver: false, timeDifference };
   });
-  private readonly initialCheck = this.timeLeft(); 
+  private readonly initialCheck = this.timeLeft();
 
   updateName(event: Event) {
     const inputElement = event.target as HTMLInputElement;
@@ -52,5 +63,4 @@ export class CountDownSignalComponent {
       this.user.name = inputElement.value;
     }
   }
-  
 }
