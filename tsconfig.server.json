@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/server",
+    "module": "es2020",
+    "moduleResolution": "node",
+    "target": "es2020",
+    "types": ["node"]
+  },
+  "files": ["server.ts"],
+  "angularCompilerOptions": {
+    "strictTemplates": true
+  }
+}
